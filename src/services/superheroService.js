@@ -6,6 +6,17 @@ export function searchSuperheroes(name) {
     .then((res) => {
       return res.data;
     })
+    .catch((error) => {
+      throw error;
+    });
+}
+
+export function getHeroById(id) {
+  return httpClient
+    .get(`/${id}`)
+    .then((res) => {
+      return res.data;
+    })
 
     .catch((error) => {
       throw error;
